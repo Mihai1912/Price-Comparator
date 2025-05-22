@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/price-history")
+@RequestMapping("/api/v1/price-history")
 public class PriceHistoryController {
 
     private final PriceHistoryService priceHistoryService;

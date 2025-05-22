@@ -37,8 +37,8 @@ public class UserController {
         return registerDto;
     }
 
-    @RequestMapping(path = "/deleteUser", method = RequestMethod.DELETE)
-    public void deleteUser(@RequestParam Integer id) {
+    @RequestMapping(path = "/deleteUser/{id}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable Integer id) {
         userRepository.deleteById(id);
     }
 }
