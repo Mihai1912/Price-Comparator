@@ -30,19 +30,15 @@ CREATE TABLE IF NOT EXISTS discounts (
     );
 
 CREATE TABLE IF NOT EXISTS users (
-                                     id int,
-                                     username text,
-                                     email text,
-                                     password text,
-
-                                     PRIMARY KEY (id)
+                                     id SERIAL PRIMARY KEY,
+                                     username TEXT,
+                                     email TEXT,
+                                     password TEXT
     );
 
 CREATE TABLE IF NOT EXISTS user_alerts (
-                                           id int,
+                                           id SERIAL PRIMARY KEY,
                                            username text,
                                            product_name text,
-                                           price decimal,
-
-                                           PRIMARY KEY (id)
+                                           price decimal
     );

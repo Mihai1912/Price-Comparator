@@ -29,10 +29,11 @@ public class UserController {
             throw new RuntimeException("User already exists");
         }
 
-        User user = new User();
-        user.setUsername(registerDto.getUsername());
-        user.setPassword(registerDto.getPassword());
-        user.setEmail(registerDto.getEmail());
+        User user = new User(
+                registerDto.getUsername(),
+                registerDto.getPassword(),
+                registerDto.getEmail()
+        );
         userRepository.save(user);
         return registerDto;
     }
